@@ -1,0 +1,145 @@
+/* =================== Your existing CSS =================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2563eb;
+    --primary-font: 'Poppins', sans-serif;
+    --primary-font-color: #000000;
+    --secondary-font-color: #ffffff;
+}
+
+.side-bar {
+    font-family: var(--primary-font);
+    width: 250px;
+    height: 100vh;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    padding-top: 20px;
+    border-right: 2px solid black;
+    transition: transform 0.3s ease;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--primary-font-color);
+    display: block;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: rgb(209, 209, 228);
+}
+
+main {
+    font-family: var(--primary-font);
+    margin-left: 250px;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.action-btn {
+    display: flex;
+    gap: 10px;
+}
+
+.update-btn {
+    background-color: #0025f7; /* Green */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #f70000; /* Red */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+/* =================== Hamburger =================== */
+#sidebar-toggle {
+    display: none; /* hidden checkbox */
+}
+
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    display: none; /* show only on mobile */
+}
+
+/* =================== Media Queries =================== */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    /* Sidebar hidden by default */
+    .side-bar {
+        transform: translateX(-100%);
+        width: 250px;
+        border-right: 2px solid black;
+        z-index: 1000;
+    }
+
+    /* Slide in when checkbox is checked */
+    #sidebar-toggle:checked + .hamburger + .side-bar {
+        transform: translateX(0);
+    }
+
+    /* Main content takes full width */
+    main {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    li a {
+        padding: 8px 8px;
+        font-size: 14px;
+    }
+}
