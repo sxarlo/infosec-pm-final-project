@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="admin-user-management.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Nabla&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Zen+Dots&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f3f3f3;
+            padding: 20px;
+        }
+
+        .report-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        thead {
+            background: #2563eb;
+            color: white;
+        }
+
+        th, td {
+            padding: 14px;
+            border-bottom: 1px solid #cccccc;
+            text-align: left;
+            font-size: 15px;
+        }
+
+        tbody tr:hover {
+            background: #f0f0f0;
+        }
+
+        .action-add { color: green; font-weight: bold; }
+        .action-update { color: #d49705; font-weight: bold; }
+        .action-delete { color: red; font-weight: bold; }
+
+        /* Mobile Responsive */
+        @media (max-width: 700px) {
+            th, td {
+                font-size: 13px;
+                padding: 10px;
+            }
+
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Checkbox for toggling sidebar -->
+        <input type="checkbox" id="sidebar-toggle">
+
+        <!-- Hamburger menu -->
+        <label for="sidebar-toggle" class="hamburger">&#9776;</label>
+        
+        <div class="side-bar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="admin-user-management.html">User Management</a></li>
+                <li><a href="admin-product-management.html">Product Management</a></li>
+                <li><a href="admin-reports.html">Reports</a></li>
+                <li><a href="admin-settings.html">Settings</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+            <div class="report-container">
+            <h1>Activity Logs</h1>
+            <p>All system actions performed by admin and employees.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Details</th>
+                        <th>Performed By</th>
+                        <th>Date & Time</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- EXAMPLE STATIC ROWS (you will replace with PHP loop later) -->
+                    <tr>
+                        <td class="action-add">ADD</td>
+                        <td>Added new product: <strong>Michelin Pilot Sport 4</strong></td>
+                        <td>admin</td>
+                        <td>2025-11-18 10:15 AM</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action-update">UPDATE</td>
+                        <td>Updated price of <strong>GS Yuasa Battery</strong> (3500 → 3800)</td>
+                        <td>employee_01</td>
+                        <td>2025-11-18 11:32 AM</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action-delete">DELETE</td>
+                        <td>Deleted product: <strong>Bridgestone Turanza T005</strong></td>
+                        <td>admin</td>
+                        <td>2025-11-18 01:02 PM</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action-update">UPDATE</td>
+                        <td>Changed product description of <strong>Motolite Gold</strong></td>
+                        <td>employee_02</td>
+                        <td>2025-11-18 01:55 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
+
+
+
+

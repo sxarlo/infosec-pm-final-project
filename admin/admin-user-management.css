@@ -76,26 +76,27 @@ table th, table td {
 
 .action-btn {
     display: flex;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .update-btn {
     background-color: #0025f7; /* Green */
     color: white;
-    padding: 5px 10px;
+    padding: 5px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .delete-btn {
     background-color: #f70000; /* Red */
     color: white;
-    padding: 5px 10px;
+    padding: 5px 5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-
+    text-decoration: none;
 }
 
 /* =================== Hamburger =================== */
